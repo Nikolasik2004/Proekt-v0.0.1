@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра Clicker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="scoreDisplay">0</div>
+        <div id="gameContainer"></div>
+        <div id="livesContainer">
+            <img src="css/images/full-heart.png" class="life" alt="Life 1">
+            <img src="css/images/full-heart.png" class="life" alt="Life 2">
+            <img src="css/images/full-heart.png" class="life" alt="Life 3">
+            <img src="css/images/full-heart.png" class="life" alt="Life 4">
+            <img src="css/images/full-heart.png" class="life" alt="Life 5">
+        </div>
+        <button id="pauseButton" class="pause">Пауза</button>
+    </div>
+    <div class="modal" id="welcomeModal">
+        <div class="modal-content">
+            <h2>Добро пожаловать в игру Clicker</h2>
+            <input type="text" id="nicknameInput" placeholder="Введите ваш никнейм">
+            <button id="startButton">Начать игру</button>
+            <label for="circleColorInput">Выберите цвет круга:</label>
+            <input type="color" id="circleColorInput" value="#ff0000">
+        </div>
+    </div>
+    <div class="modal" id="gameOverModal">
+        <div class="modal-content">
+            <h2>Игра окончена</h2>
+            <p>Ваш итоговый счёт: <span id="finalScore"></span></p>
+            <button id="restartButton">Начать заново</button>
+        </div>
+    </div>
+    <audio id="clickSound" src="css/sounds/click-sound.mp3"></audio>
+    <audio id="missSound" src="css/sounds/knopka-schelchok-korotkii-zvonkii-blizkii-suhoi1.mp3"></audio>
+    <div id="volumeControlContainer">
+        <label for="volumeControl">Громкость:</label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1">
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

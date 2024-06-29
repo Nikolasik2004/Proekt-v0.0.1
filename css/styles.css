@@ -1,0 +1,174 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/MQMw.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+#mainContainer {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameContainer {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    max-width: 600px;
+    max-height: 600px;
+    background-color: #333;
+    border: 5px solid white;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#livesContainer {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.life {
+    width: 50px;
+    height: 50px;
+}
+
+#volumeControlContainer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#volumeControl {
+    width: 200px;
+}
+
+#scoreDisplay {
+    margin-top: 10px;
+    font-size: 2em;
+    color: white;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+#pauseButton {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: rgb(169, 201, 27);
+    cursor: pointer;
+}
+
+#pauseButton.paused {
+    background-color: black;
+    color: white;
+}
+
+.arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid;
+    z-index: 2;
+}
+
+
+.circle.growing {
+    animation: grow 0.2s forwards;
+}
+
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#nicknameInput {
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#restartButton {
+    background-color: #f44336;
+}
+
+#restartButton:hover {
+    background-color: #e53935;
+}
+
+#closeButton {
+    background-color: #555;
+}
+
+#closeButton:hover {
+    background-color: #444;
+}
